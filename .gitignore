@@ -65,3 +65,8 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+
+/config/credentials/*.key
+/config/credentials/test.yml.enc
+/config/credentials/development.yml.enc

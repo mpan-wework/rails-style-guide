@@ -1,0 +1,47 @@
+name: RSpec
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: example
+    services:
+      postgres:
+        image: postgres:12
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: WeW0rk
+          POSTGRES_PASSWORD: Pa55w0rd
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - name: SCM
+        uses: actions/checkout@v1
+      - name: Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - name: Library
+        run: sudo apt-get install libpq-dev
+      - name: Bundle
+        run: |
+          gem install bundler
+          bundle install --jobs 10 --retry 5
+      - name: Migration
+        run: |
+          bundle exec rails db:create db:migrate
+        env:
+          RAILS_ENV: github
+      - name: RSpec
+        run: |
+          bundle exec rspec --format d
+        env:
+          RAILS_ENV: github
+

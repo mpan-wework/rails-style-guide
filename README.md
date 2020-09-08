@@ -4,4 +4,4 @@ Let's build a simple Rails service, providing information about WeWork's `User`,
 
 During the development, we would note down some useful suggestions as our style guide.
 
-We are using `ruby 2.6.5` and `rails ~>6.0`.
+We are using `ruby 2.6.6` and `rails ~>6.0`.
