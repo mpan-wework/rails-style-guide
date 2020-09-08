@@ -26,6 +26,7 @@ group :development, :test, :github do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'rubocop', '~> 0.90.0'
 end
 
 group :development do

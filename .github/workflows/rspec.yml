@@ -30,6 +30,13 @@ jobs:
           ruby-version: '2.6'
       - name: Library
         run: sudo apt-get install libpq-dev
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
       - name: Bundle
         run: |
           gem install bundler
@@ -44,4 +51,7 @@ jobs:
           bundle exec rspec --format d
         env:
           RAILS_ENV: github
+      - name: RuboCop
+        run: |
+          bundle exec rubocop
 

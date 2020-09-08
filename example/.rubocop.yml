@@ -1,0 +1,19 @@
+AllCops:
+  NewCops: enable
+  DisplayCopNames: true
+  Exclude:
+    - 'Gemfile'
+    - 'bin/*'
+    - 'config/application.rb'
+    - 'config/puma.rb'
+    - 'config/spring.rb'
+    - 'db/schema.rb'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

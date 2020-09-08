@@ -13,6 +13,7 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+# rubocop:disable Style/BlockComments
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -94,3 +95,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+# rubocop:enable Style/BlockComments

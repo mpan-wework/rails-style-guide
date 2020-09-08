@@ -19,7 +19,7 @@ FactoryBot.define do
 
     name { SecureRandom.alphanumeric 16 }
     email { "#{SecureRandom.alphanumeric 6}@#{SecureRandom.alphanumeric 6}" }
-    phone { DateTime.now.strftime("%Q").to_i }
+    phone { DateTime.now.strftime('%Q').to_i }
     firm_uuid { firm.uuid }
   end
 end
