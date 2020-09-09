@@ -8,6 +8,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_buildings_on_uuid  (uuid) UNIQUE
+#
 FactoryBot.define do
   factory :building do
     name { SecureRandom.alphanumeric 16 }

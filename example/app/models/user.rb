@@ -11,6 +11,11 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_users_on_firm_uuid  (firm_uuid)
+#  index_users_on_uuid       (uuid) UNIQUE
+#
 class User < ApplicationRecord
   belongs_to :firm, foreign_key: :firm_uuid, primary_key: :uuid
 

@@ -11,6 +11,11 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_users_on_firm_uuid  (firm_uuid)
+#  index_users_on_uuid       (uuid) UNIQUE
+#
 FactoryBot.define do
   factory :user do
     transient do
