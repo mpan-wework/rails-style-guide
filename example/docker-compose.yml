@@ -1,0 +1,31 @@
+version: '3'
+services:
+  pg12:
+    container_name: example-pg12
+    image: postgres:12.2-alpine
+    environment:
+      POSTGRES_USER: mike
+      POSTGRES_PASSWORD: pa55w0rd
+    ports:
+      - 45432:5432
+    volumes:
+      - ./.volumes/pg12/data:/var/lib/postgresql/data
+  rails:
+    container_name: example-rails
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/sh -c "bundle exec rails db:create db:migrate && bundle exec rails s"
+    environment:
+      RAILS_ENV: github
+      RAILS_LOG_TO_STDOUT: 1
+      PG_HOST: example-pg12
+      PG_PORT: 5432
+      PG_DATABASE: example_local
+      PG_USERNAME: mike
+      PG_PASSWORD: pa55w0rd
+    working_dir: /var/www/server
+    volumes:
+      - .:/var/www/server
+    ports:
+      - 53000:3000
