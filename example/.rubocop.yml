@@ -12,8 +12,20 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/SingleArgumentDig:
+  Exclude:
+    - 'spec/**/*'
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '()'

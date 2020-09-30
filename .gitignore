@@ -70,3 +70,6 @@ yarn-debug.log*
 /config/credentials/*.key
 /config/credentials/test.yml.enc
 /config/credentials/development.yml.enc
+
+.volumes
+.generators
