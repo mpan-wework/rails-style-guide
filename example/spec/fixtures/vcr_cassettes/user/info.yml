@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://jsonplaceholder.typicode.com/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Authorization:
+      - 'Bearer '
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 10 Oct 2020 09:36:23 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      set-cookie:
+      - __cfduid=d87bcff933b538a08801bd2e73a46feb81602322583; expires=Mon, 09-Nov-20
+        09:36:23 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+      x-powered-by:
+      - Express
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '999'
+      x-ratelimit-reset:
+      - '1601432074'
+      vary:
+      - Origin, Accept-Encoding
+      access-control-allow-credentials:
+      - 'true'
+      cache-control:
+      - max-age=43200
+      pragma:
+      - no-cache
+      expires:
+      - "-1"
+      x-content-type-options:
+      - nosniff
+      etag:
+      - W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+      via:
+      - 1.1 vegur
+      cf-cache-status:
+      - HIT
+      age:
+      - '11658'
+      cf-request-id:
+      - 05b37767ea0000173c188b9200000001
+      expect-ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=35&lkg-time=1602322584"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 5dff5b531c32173c-SIN
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 1,
+          "name": "Leanne Graham",
+          "username": "Bret",
+          "email": "Sincere@april.biz",
+          "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+            }
+          },
+          "phone": "1-770-736-8031 x56442",
+          "website": "hildegard.org",
+          "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+          }
+        }
+  recorded_at: Sat, 10 Oct 2020 09:36:23 GMT
+recorded_with: VCR 6.0.0
