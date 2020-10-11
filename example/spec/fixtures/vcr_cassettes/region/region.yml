@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://countries.trevorblades.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query($code: ID!) {\n  region: country(code: $code) {\n    code
+        name capital phone currency native\n    languages {\n      name native\n    }\n  }\n}\n","variables":{"code":"CN"}}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-type:
+      - application/json
+      Authorization:
+      - 'Bearer '
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Cowboy
+      connection:
+      - keep-alive
+      x-powered-by:
+      - Express
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '168'
+      etag:
+      - W/"a8-yZQXSuaJLJ3u4oxMbBQf1JJR++M"
+      date:
+      - Sun, 11 Oct 2020 23:56:17 GMT
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"region":{"code":"CN","name":"China","capital":"Beijing","phone":"86","currency":"CNY","native":"中国","languages":[{"name":"Chinese","native":"中文"}]}}}
+
+        '
+  recorded_at: Sun, 11 Oct 2020 23:56:17 GMT
+recorded_with: VCR 6.0.0
