@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://jsonplaceholder.typicode.com/users/3/posts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Authorization:
+      - 'Bearer '
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 10 Oct 2020 09:36:25 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      set-cookie:
+      - __cfduid=d64dc2fea9ed579ce07eabaaa6c1558c41602322584; expires=Mon, 09-Nov-20
+        09:36:24 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+      x-powered-by:
+      - Express
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '999'
+      x-ratelimit-reset:
+      - '1602322619'
+      vary:
+      - Origin, Accept-Encoding
+      access-control-allow-credentials:
+      - 'true'
+      cache-control:
+      - no-cache
+      pragma:
+      - no-cache
+      expires:
+      - "-1"
+      x-content-type-options:
+      - nosniff
+      etag:
+      - W/"a65-1/mRNOhrr+3bFpMuWj+OXmTpWLs"
+      via:
+      - 1.1 vegur
+      cf-cache-status:
+      - BYPASS
+      cf-request-id:
+      - 05b3776d4e000018f047bda200000001
+      expect-ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=35&lkg-time=1602322585"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 5dff5b5bb9bf18f0-SIN
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "userId": 3,
+            "id": 21,
+            "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+            "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+          },
+          {
+            "userId": 3,
+            "id": 22,
+            "title": "dolor sint quo a velit explicabo quia nam",
+            "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+          },
+          {
+            "userId": 3,
+            "id": 23,
+            "title": "maxime id vitae nihil numquam",
+            "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+          },
+          {
+            "userId": 3,
+            "id": 24,
+            "title": "autem hic labore sunt dolores incidunt",
+            "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+          },
+          {
+            "userId": 3,
+            "id": 25,
+            "title": "rem alias distinctio quo quis",
+            "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+          },
+          {
+            "userId": 3,
+            "id": 26,
+            "title": "est et quae odit qui non",
+            "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+          },
+          {
+            "userId": 3,
+            "id": 27,
+            "title": "quasi id et eos tenetur aut quo autem",
+            "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+          },
+          {
+            "userId": 3,
+            "id": 28,
+            "title": "delectus ullam et corporis nulla voluptas sequi",
+            "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+          },
+          {
+            "userId": 3,
+            "id": 29,
+            "title": "iusto eius quod necessitatibus culpa ea",
+            "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+          },
+          {
+            "userId": 3,
+            "id": 30,
+            "title": "a quo magni similique perferendis",
+            "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+          }
+        ]
+  recorded_at: Sat, 10 Oct 2020 09:36:25 GMT
+recorded_with: VCR 6.0.0

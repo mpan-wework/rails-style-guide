@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://countries.trevorblades.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query($regionCodes: [String]) {\n  regions: countries(filter:
+        { code: { in: $regionCodes }}) {\n    code name capital phone currency native\n    languages
+        {\n      name native\n    }\n  }\n}\n","variables":{"regionCodes":["CN","GB","HK","JP","KR","MO","RU","TW","US"]}}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-type:
+      - application/json
+      Authorization:
+      - 'Bearer '
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Cowboy
+      connection:
+      - keep-alive
+      x-powered-by:
+      - Express
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1523'
+      etag:
+      - W/"5f3-8RPVwU6uSxxv2PP/TfKtrheqO1s"
+      date:
+      - Sun, 11 Oct 2020 23:56:16 GMT
+      via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"regions":[{"code":"CN","name":"China","capital":"Beijing","phone":"86","currency":"CNY","native":"中国","languages":[{"name":"Chinese","native":"中文"}]},{"code":"GB","name":"United
+        Kingdom","capital":"London","phone":"44","currency":"GBP","native":"United
+        Kingdom","languages":[{"name":"English","native":"English"}]},{"code":"HK","name":"Hong
+        Kong","capital":"City of Victoria","phone":"852","currency":"HKD","native":"香港","languages":[{"name":"Chinese","native":"中文"},{"name":"English","native":"English"}]},{"code":"JP","name":"Japan","capital":"Tokyo","phone":"81","currency":"JPY","native":"日本","languages":[{"name":"Japanese","native":"日本語"}]},{"code":"KR","name":"South
+        Korea","capital":"Seoul","phone":"82","currency":"KRW","native":"대한민국","languages":[{"name":"Korean","native":"한국어"}]},{"code":"MO","name":"Macao","capital":null,"phone":"853","currency":"MOP","native":"澳門","languages":[{"name":"Chinese","native":"中文"},{"name":"Portuguese","native":"Português"}]},{"code":"RU","name":"Russia","capital":"Moscow","phone":"7","currency":"RUB","native":"Россия","languages":[{"name":"Russian","native":"Русский"}]},{"code":"TW","name":"Taiwan","capital":"Taipei","phone":"886","currency":"TWD","native":"臺灣","languages":[{"name":"Chinese","native":"中文"}]},{"code":"US","name":"United
+        States","capital":"Washington D.C.","phone":"1","currency":"USD,USN,USS","native":"United
+        States","languages":[{"name":"English","native":"English"}]}]}}
+
+        '
+  recorded_at: Sun, 11 Oct 2020 23:56:16 GMT
+recorded_with: VCR 6.0.0

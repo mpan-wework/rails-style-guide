@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://jsonplaceholder.typicode.com/users/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Authorization:
+      - 'Bearer '
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 10 Oct 2020 09:36:24 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      set-cookie:
+      - __cfduid=d717d3f5b31d7eab1221f4e2cef34e6111602322584; expires=Mon, 09-Nov-20
+        09:36:24 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+      x-powered-by:
+      - Express
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '999'
+      x-ratelimit-reset:
+      - '1600699971'
+      vary:
+      - Origin, Accept-Encoding
+      access-control-allow-credentials:
+      - 'true'
+      cache-control:
+      - max-age=43200
+      pragma:
+      - no-cache
+      expires:
+      - "-1"
+      x-content-type-options:
+      - nosniff
+      etag:
+      - W/"1fd-XTG63SYhaP/Uo6/vgmARnL3rpBk"
+      via:
+      - 1.1 vegur
+      cf-cache-status:
+      - HIT
+      age:
+      - '1754'
+      cf-request-id:
+      - 05b3776a9b00001a5660a2b200000001
+      expect-ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=35&lkg-time=1602322584"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 5dff5b5759f31a56-SIN
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 2,
+          "name": "Ervin Howell",
+          "username": "Antonette",
+          "email": "Shanna@melissa.tv",
+          "address": {
+            "street": "Victor Plains",
+            "suite": "Suite 879",
+            "city": "Wisokyburgh",
+            "zipcode": "90566-7771",
+            "geo": {
+              "lat": "-43.9509",
+              "lng": "-34.4618"
+            }
+          },
+          "phone": "010-692-6593 x09125",
+          "website": "anastasia.net",
+          "company": {
+            "name": "Deckow-Crist",
+            "catchPhrase": "Proactive didactic contingency",
+            "bs": "synergize scalable supply-chains"
+          }
+        }
+  recorded_at: Sat, 10 Oct 2020 09:36:24 GMT
+recorded_with: VCR 6.0.0
